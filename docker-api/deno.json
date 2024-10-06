@@ -1,0 +1,8 @@
+{
+    "imports": {},
+    "tasks": {
+      "test": "deno test -A"
+    },
+    "lock": false
+  }
+  

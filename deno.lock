@@ -1,0 +1,45 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@std/assert@*": "1.0.6",
+    "jsr:@std/internal@^1.0.4": "1.0.4"
+  },
+  "jsr": {
+    "@std/assert@1.0.6": {
+      "integrity": "1904c05806a25d94fe791d6d883b685c9e2dcd60e4f9fc30f4fc5cf010c72207",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.4": {
+      "integrity": "62e8e4911527e5e4f307741a795c0b0a9e6958d0b3790716ae71ce085f755422"
+    }
+  },
+  "redirects": {
+    "https://deno.land/x/dockerapi/mod.ts": "https://deno.land/x/dockerapi@v0.1.1/mod.ts"
+  },
+  "remote": {
+    "https://deno.land/x/dockerapi@v0.1.1/lib/client.ts": "101b2073014fe09c0d32f7beb232d09fc4330b988f09aa4387f8801ce87f12d8",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/container.ts": "b7dfee03b59fe3da08f19b4f96cc8b9cd49875ab72b84509cc5de322fe6aa55e",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/exec.ts": "9e444ae622613e157fa434ea3cf6b2c7c4701a5585ac305d1c265464e9644004",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/image.ts": "0f9b1eecb5eb6490d34976a705f13b84711ee99cf19e1d2405b138f86965dc24",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/network.ts": "be7a09b0c2964ec30c952f338b200601b33ff54dea2cd23636e2c5246686f973",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/system.ts": "9b6e1b741e35ac05cc251371479d4fa50bf235e3993655fb4a3e00cd2fc28a33",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/types/container.ts": "c121a551d567ad2c3cc61fac48df66a43405d9261f2a08973529ca3143d85785",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/types/exec.ts": "5274cc39027b99c96962c871fcc04fd7c0903b8586770c05a73968acda5417df",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/types/http.ts": "e56afd7b33a48c2835ec81b3fabd6da577d663bd0754c9cc0beef8b11cbc4928",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/types/image.ts": "d0f6a12cbbacea517f9677c2f84d8fcb435485d48f2a5576873f81a0f04965be",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/types/network.ts": "53bc1168d350e856991610cee0a9ac83548dde12040cdf813d9222b2a74d04f2",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/types/system.ts": "91bcbbfce64a75ee913371f7d0873bbced199ccf6ab861ad06c91149415ec4bd",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/types/volume.ts": "9a89824aa26a084129708e5668d7e20a59fdccdb05e78966c46efbcb8c59353d",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/util/http.ts": "b7f074597f55c10b17427a6fe44babd43795f277d14d39a0ca9a02144d287f05",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/util/io.ts": "d0c141b50ea0bd9feb5b06e252d3667e5ece44157be7694845c7ff5d6a8b5718",
+    "https://deno.land/x/dockerapi@v0.1.1/lib/volume.ts": "a38a6ef182874b67221e20953c898fa3fdf6ad33124e241ca03c90ad9774ce4d",
+    "https://deno.land/x/dockerapi@v0.1.1/mod.ts": "eb253729c99f111315b143a93b55ede49689a0196df6db9e71a21ed77ae416e0"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@1"
+    ]
+  }
+}
