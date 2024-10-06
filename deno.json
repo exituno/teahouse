@@ -1,8 +1,9 @@
 {
   "tasks": {
-    "dev": "deno run --allow-net --watch main.ts"
+    "dev": "deno run --allow-env --allow-net --watch main.ts"
   },
   "imports": {
+    "@nhttp/trpc": "jsr:@nhttp/trpc@^2.0.2",
     "@std/assert": "jsr:@std/assert@1"
   }
 }
