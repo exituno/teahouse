@@ -1,3 +1,3 @@
 export default () => {
-    return { message: `pong` };
-}
+  return { message: `pong` };
+};

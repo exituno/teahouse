@@ -1,3 +1,3 @@
 export interface DockerOptions {
-    version?: string;
+  version?: string;
 }
