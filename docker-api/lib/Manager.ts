@@ -1,7 +1,7 @@
 import type { Connector } from "./types/DockerConnector.ts";
 
 export abstract class Manager {
-    private connector: Connector;
+    protected connector: Connector;
     private version: string;
 
     constructor(connector: Connector, version: string) {
