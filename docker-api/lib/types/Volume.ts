@@ -1,3 +1,5 @@
+import type { UsageData } from "./DockerUsageData.ts";
+
 export interface Volume {
     name: string;
     driver: string;

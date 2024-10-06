@@ -23,5 +23,5 @@ if (import.meta.main) {
     console.log(`Running on port ${info.port}`);
   });
 
-  console.log(await engine.networks.list());
+  console.log(await engine.version());
 }
