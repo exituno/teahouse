@@ -6,8 +6,8 @@ export interface Container {
     Command: string;
     Created: number; // int64
     Ports: Port[];
-    SizeRw: number | null; // int64, could be null
-    SizeRootFs: number | null; // int64, could be null
+    SizeRw: number | null;
+    SizeRootFs: number | null;
     Labels: { [key: string]: string };
     State: string;
     Status: string;
