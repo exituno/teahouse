@@ -14,7 +14,6 @@ export class TCPConnector implements Connector {
         headers: Record<string, string> = {},
     ): Promise<Response> {
         const url = `${this.baseUrl}${path}`;
-        console.log(url)
         const options: RequestInit = {
             method,
             headers: {
