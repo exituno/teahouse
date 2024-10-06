@@ -4,23 +4,26 @@ import type { DockerOptions } from "./lib/types/DockerOptions.ts";
 import { VolumeManager } from "./lib/VolumeManager.ts";
 import { DockerInfo } from "./lib/types/DockerInfo.ts";
 import type { TeaResponse } from "./lib/types/TeaResponse.ts";
+import { ContainerManager } from "./lib/ContainerManager.ts";
+import { ImageManager } from "./lib/ImageManager.ts";
+import { NetworkManager } from "./lib/NetworkManager.ts";
 
 const DEFAULT_VERSION: string = "v1.47";
 
 export class Docker {
   private connector: Connector;
-  // public containers: ContainerManager;
-  // public images: ImageManager;
-  // public networks: NetworkManager;
+  public containers: ContainerManager;
+  public images: ImageManager;
+  public networks: NetworkManager;
   public volumes: VolumeManager;
 
   constructor(connector: string, options: DockerOptions = {}) {
     const version = options.version || DEFAULT_VERSION;
     this.connector = this.createConnector(connector);
 
-    // this.containers = new ContainerManager(baseUrl, apiVersion);
-    // this.images = new ImageManager(baseUrl, apiVersion);
-    // this.networks = new NetworkManager(baseUrl, apiVersion);
+    this.containers = new ContainerManager(this.connector, version);
+    this.images = new ImageManager(this.connector, version);
+    this.networks = new NetworkManager(this.connector, version);
     this.volumes = new VolumeManager(this.connector, version);
   }
 
@@ -46,20 +49,20 @@ export class Docker {
         return {
           code: 200,
           success: true,
-          data: data as DockerInfo
+          data: data as DockerInfo,
         };
       case 500:
         return {
           code: 500,
           success: false,
           message: data.message ?? "Server Error",
-        }
+        };
       default:
         return {
           code: -1,
           success: false,
           message: data.message ?? `Unexpected status code: ${res.status}`,
-        }
+        };
     }
   }
 }
